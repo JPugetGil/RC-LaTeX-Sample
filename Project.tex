@@ -1,0 +1,109 @@
+\documentclass[a4paper, 12pt, openany, english]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{array}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[nottoc,notlot,notlof,numbib]{tocbibind}
+\usepackage[acronym]{glossaries}
+
+\addbibresource{bibliography.bib}
+
+\hypersetup{linktoc=all}
+\setcounter{tocdepth}{2}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt} sur \pageref{LastPage}}
+
+\input{tex/glossary}
+
+\begin{document}
+\begin{titlepage}
+        \begin{center}
+
+                \includegraphics[width=1\textwidth]{img/landing/report.jpg}\\[0.2in]
+                \textup{\small {\bf Study information} }\\[0.2in]
+                
+                % Title
+                \Large \textbf {Title line 1}\\
+                \Large \textbf {Title line 2}\\[0.4in]
+                
+                
+                %----------------------------------------------------------------------------------------
+                %	AUTHOR SECTION
+                %----------------------------------------------------------------------------------------
+                
+                \small Written by \\[0.2in]
+                \textbf{Author name}\\
+                Your position line 1\\
+                Your position line 2\\
+                
+                \vspace{.2in}
+                Co-authors\\[0.2in]
+                \textbf{Co-author 1 fullname}\\
+                Position \\
+                
+                \vspace{.1in}
+                \textbf{Co-author 2 fullname}\\
+                Position
+                
+                
+                \vspace{.2in}
+                
+                % Bottom of the page
+                \includegraphics[width=0.6\textwidth]{img/landing/architecture.jpg}\\[0.4in]
+                \Large{Name of the team}\\
+                \normalsize
+                Address line 1 \\
+                Address line 2 \\
+                \vspace{0.2cm}
+                YEAR of the study
+                \vspace{0.2cm}
+                
+                %----------------------------------------------------------------------------------------
+                %	DATE SECTION
+                %----------------------------------------------------------------------------------------
+                
+                {\small Submitted on: \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+                
+        \end{center}
+        %----------------------------------------------------------------------------------------
+        \vfill % Fill the rest of the page with whitespace
+\end{titlepage}
+
+
+%----------------------------------------------------------------------------------------
+%	LISTINGS PARAMETERS 
+%----------------------------------------------------------------------------------------
+
+\input{tex/listings-params}
+
+\tableofcontents
+
+\listoffigures
+
+\printglossary
+\newpage
+
+\printbibliography
+
+\end{document}
